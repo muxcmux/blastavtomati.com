@@ -1,0 +1,477 @@
+@import "compass";
+@media(min-width: $screen-lg-min) {
+  .container { width: 970px; }
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -120px;
+  /* Pad bottom by footer height */
+  padding: 0 0 120px;
+}
+
+.btn:focus { outline: none !important }
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 120px;
+  background-color: lighten($brand-primary, 7%);
+  .container { position: relative }
+  img {
+    width: 36px;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    margin-left: -18px;
+  }
+}
+
+a {
+  color: $brand-warning;
+  &:hover {
+    color: darken($brand-warning, 10%);
+    text-decoration: none;
+  }
+}
+
+h1.alt, h2.alt, h3.alt, h4.alt, h5.alt, h6.alt {
+  font-family: Nunito;
+} 
+
+.jumbotron { padding: 20px !important }
+
+#content { padding-top: 68px }
+
+#navstrip {
+  height: 68px;
+  overflow: hidden;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  @include box-shadow(0 2px 6px rgba(0,0,0,.1));
+  background: white;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+#logo {
+  margin: 5px 20px 5px 20px;
+  display: block;
+  height: 38px;
+  color: #ccc;
+  font-style: italic;
+  line-height: 39px;
+  font-weight: 300;
+  @include transition(color .2s ease);
+  &:hover {
+    text-decoration: none;
+    color: #333;
+  }
+  img {
+    width: 36px;
+    height: auto;
+    display: block;
+    float: left;
+    margin-right: 20px;
+  }
+}
+
+#main-nav {
+  list-style: none;
+  margin: 15px 0 0 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: .9em;
+  font-weight: 300;
+  li {
+    float: left;
+    display: block;
+    margin: 0;
+    padding: 0 10px;
+    a {
+      @include transition(background-color .2s ease, color .2s ease);
+      border-radius: 3px;
+      padding: 6px 8px;
+      color: $brand-success;
+      &:hover { text-decoration: none; }
+      &.selected, &:hover {
+        background: $brand-success;
+        color: white;
+        sup { color: white }
+      }
+      sup {
+        color: $brand-danger;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.image-hero {
+  .overlay-pattern {
+    background: url('/images/overlay-pattern.png') 50% 50% repeat;
+  }
+  &.homepage {
+    background: url('/images/home.jpg') 0 0 no-repeat;
+    background-size: cover;
+  }
+  &.products {
+    background: url('/images/products.jpg') 0 0 no-repeat;
+    background-size: cover;
+  }
+  &.services {
+    background: url('/images/services.jpg') 0 0 no-repeat;
+    background-size: cover;
+  }
+  position: relative;
+  overflow: hidden;
+  .jumbotron {
+    color: #eee;
+    background: transparent;
+    text-shadow: 0 0 5px rgba(0,0,0,.5);
+    h1 { font-weight: 300; }
+    .buttons { margin-top: 30px; }
+  }
+}
+
+.btn-outline {
+  @include transition(background-color .2s ease, color .2s ease);
+  border: 2px solid $brand-warning;
+  color: $brand-warning;
+  &:hover {
+    background: $brand-warning;
+    color: #333;
+    text-shadow: none;
+  }
+  &.primary {
+    border: 2px solid $brand-primary;
+    color: $brand-primary;
+    &:hover {
+      background: $brand-primary;
+      color: white;
+    }
+  }
+  &.danger {
+    border: 2px solid $brand-danger;
+    color: $brand-danger;
+    &:hover {
+      background: $brand-danger;
+      color: white;
+    }
+  }
+  &.success {
+    border: 2px solid $brand-success;
+    color: $brand-success;
+    &:hover {
+      background: $brand-success;
+      color: white;
+    }
+  }
+}
+
+.homepage-features {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-weight: 300;
+  > img {
+    width: 80px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+  }
+  > h4 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 20px 0;
+    color: $brand-primary;
+  }
+  p { margin: 20px 0 }
+}
+
+.workflow {
+  background: $brand-info;
+  color: white;
+  h2 {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 50px 0;
+  }
+  .row {
+    margin: 50px 0;
+    @include clearfix;
+    > div {
+      position: relative;
+      padding-left: 20px;
+      padding-right: 20px;
+      color: lighten($brand-success, 25%);
+      text-align: center;
+      span {
+        text-align: center;
+        border-radius: 40px;
+        background: white;
+        width: 70px;
+        height: 70px;
+        display: block;
+        margin: 0 auto;
+        i {
+          line-height: 70px;
+          font-size: 42px;
+          color: $brand-success;
+          &.fa-pencil-square-o {
+            line-height: 76px;
+            margin-left: 5px;
+          }
+        }
+      }
+      h4 {
+        color: white;
+        text-align: center;
+        font-weight: 300;
+        margin: 20px 0;
+      }
+      &:after {
+        display: block;
+        position: absolute;
+        content: "\f178";
+        font-family: FontAwesome;
+        font-size: 28px;
+        top: 16px;
+        right: -14px;
+        color: white;
+      }
+      &:last-child {
+        &:after {
+          display: none;
+          content: "";
+        }
+      }
+    }
+  }
+}
+
+.quotes {
+  background: $brand-danger;
+  color: white;
+  h2 {
+    margin: 50px 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+  }
+  .container {
+    position: relative;
+    > i.fa-quote-left {
+      font-size: 56px;
+      position: absolute;
+      top: -40px;
+      left: 20px;
+    }
+  }
+  blockquote {
+    border-left: none;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.1em;
+    margin: 40px 0;
+    position: relative;
+    color: lighten($brand-danger, 26%);
+    em {
+      color: white;
+      font-style: normal;
+      display: block;
+      font-family: Nunito;
+      margin: 10px;
+      strong {
+        font-weight: 400;
+      }
+    }
+    &:after {
+      display: block;
+      position: absolute;
+      content: "•••";
+      font-size: 24px;
+      color: darken($brand-danger, 10%);
+      bottom: -30px;
+      left: 50%;
+      margin-left: -14px;
+    }
+  }
+}
+
+.latest-work {
+  padding-bottom: 50px;
+  h2 {
+    margin: 50px 0;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .thumbnail {
+    @include transition(all .2s ease);
+    position: relative;
+    border-radius: 1px;
+    z-index: 1;
+    @include box-shadow(0 1px 3px rgba(0,0,0,0.15));
+    img { width: 100% }
+    &:after {
+      font-family: Nunito;
+      font-weight: 300;
+      position: absolute;
+      z-index: 2;
+      display: block;
+      content: attr(title);
+      background: rgba(0,0,0,0.4);
+      color: white;
+      padding: 4px 8px;
+      bottom: 4px;
+      left: 4px;
+      right: 4px;
+    }
+    &:hover {
+      z-index: 3;
+      @include transform(scale(1.1));
+    }
+  }
+}
+
+.contact-us {
+  background: $brand-success;
+  color: lighten($brand-success, 35%);
+  h1 { color: white; }
+  position: relative;
+  z-index: 998;
+  @include box-shadow(0 1px 2px rgba(0,0,0,0.2));
+  border-bottom: 2px solid darken($brand-success, 10%);
+}
+
+.jumbotron.no-bg {
+  background: transparent;
+  margin-bottom: 0px;
+}
+
+#map {
+  width: 100%;
+  height: 460px;
+}
+
+button {
+  outline: none;
+  &:focus {
+    outline: none;
+    @include box-shadow(none);
+  }
+}
+
+.map-container {
+  position: relative;
+  #contact-us {
+    @include box-shadow(0 1px 3px rgba(0,0,0,.3));
+    width: 50%;
+    padding: 20px;
+    background: white;
+    position: absolute;
+    z-index: 997;
+    margin-top: 52px;
+    .btn {
+      border-radius: 2px;
+      background: lighten($brand-primary, 10%);
+      border: none;
+      border-bottom: 3px solid $brand-primary;
+      &:hover {
+        background: $brand-primary;
+        border-bottom-color: darken($brand-primary, 5%);
+      }
+    }
+    ul {
+      list-style: none;
+      margin-bottom: 15px;
+      li {
+        margin: 4px 0;
+        font-size: 12px;
+        color: #999;
+        padding-left: 24px;
+        position: relative;
+        &.phone, &.mobile, &.mail, &.address {
+          &:before {
+            font-family: FontAwesome;
+            position: absolute;
+            left: 0;
+            display: block;
+            content: "\f095";
+            color: #555;
+            font-size: 14px;
+            text-align: center;
+            width: 24px;
+            top: -2px;
+          }
+        }
+        &.mobile:before { content: "\f10b" }
+        &.mail:before { content: "\f003" }
+        &.address:before { content: "\f041" }
+      }
+    }
+    .company-info {
+      border-bottom: 1px solid #eee;
+      margin-bottom: 25px;
+    }
+    .form-group.has-error {
+      #name, #email, #message {
+        background: lighten($brand-danger, 35%);
+        border-bottom-color: $brand-danger;
+      }
+    }
+    .loading-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: rgba(255,255,255,.6);
+      z-index: 998;
+    }
+    .alert.alert-success {
+      border-radius: 0;
+      border: none;
+      border-bottom: 3px solid #d6e9c6;
+    }
+  }
+}
+
+#name, #email, #message {
+  border-radius: 0;
+  border: none;
+  background: #f4f4f4;
+  border-bottom: 3px solid #ddd;
+  @include box-shadow(none);
+  &::-webkit-input-placeholder {
+    color: #bbb;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    color: #bbb;
+  }
+  &::-moz-placeholder {  /* Firefox 19+ */
+    color: #bbb;
+  }
+  &:-ms-input-placeholder {  
+    color: #bbb;
+  }
+  &:focus {
+    border-bottom-color: lighten($brand-primary, 10%);
+  }
+}
+
+#message { margin-top: 10px; }

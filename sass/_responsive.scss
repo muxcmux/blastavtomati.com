@@ -1,0 +1,16 @@
+/* phones */
+@media only screen and (max-width: $screen-sm - 1) {
+  .workflow .row {
+    margin: 20px 0;
+    > div {
+       margin: 0 0 100px 0;
+       &:after {
+        content: "\f175";
+        top: auto;
+        bottom: -70px;
+        right: 50%;
+        margin-right: -5px;
+       }
+    }
+  }
+}

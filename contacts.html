@@ -1,0 +1,99 @@
+---
+layout: default
+title: Contact us
+main_nav: contacts
+---
+<div class="contact-us">
+  <div class="container">
+    <div class="jumbotron no-bg">
+      <h1 class="alt">Contact us</h1>
+      <p>
+        Are you ready to discuss your project? Use the form below to get in touch, give us a call, or come by our office to have a chat!
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="container map-container">
+  <form action="" id="contact-us">
+    <div class="loading-overlay hide"></div>
+    <div class="row company-info">
+      <ul class="col-xs-6">
+        <li class="phone">+359 32 689 784</li>
+        <li class="mobile">+359 887 205 905 </li>
+        <li class="mail">karasavov@yahoo.com</li>
+      </ul>
+      <ul class="col-xs-6">
+        <li class="address">12B Volga street,</li>
+        <li>Plovdiv 4020,</li>
+        <li>Bulgaria</li>
+      </ul>
+    </div>
+    <div class="thanks hide">
+      <div class="alert alert-success">Thanks for reaching out to us! We'll get back to you as soon as possible.</div>
+    </div>
+    <div class="the-form">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <input class="form-control" type="text" id="name" placeholder="Your name">
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <input class="form-control" type="email" id="email" placeholder="E-mail address">
+          </div>
+        </div>  
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <textarea class="form-control" rows="4" id="message" placeholder="Enter your message..."></textarea>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="pull-right">
+            <button type="submit" class="btn btn-primary" id="send-message">Send Message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div id="map"></div>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDa_LoKOhysCq8m1eS7owbwHo7u9cwRSb8"></script>
+
+<script type="text/javascript">
+  function initialize() {
+    var office = new google.maps.LatLng(42.147254, 24.738727);
+    var center = new google.maps.LatLng(42.147487, 24.732464);
+    
+    var mapOptions = {
+      center: center,
+      zoom: 16,
+      scrollwheel: false,
+      panControl: false,
+      mapTypeControl: false,
+      streetViewControl: false,
+      zoomControlOptions: {
+        style: google.maps.ZoomControlStyle.SMALL,
+        position: google.maps.ControlPosition.TOP_RIGHT
+      }
+    };
+    
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    
+    var icon = new google.maps.MarkerImage("/images/map-marker.png", null, null, null, new google.maps.Size(28,40));
+    
+    var marker = new google.maps.Marker({
+      position: office,
+      map: map,
+      icon: icon
+    });
+    
+    marker.setMap(map);
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>

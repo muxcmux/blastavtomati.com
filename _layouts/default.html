@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ page.title }}</title>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300|Nunito:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="navstrip">
+        <div class="container">
+          <a id="logo" href="/" title="Devshard" class="pull-left">
+            <img src="/images/logo.png" alt="Devshard - precision engineering" />
+            Engineering precision.
+          </a>
+          <ul id="main-nav" class="pull-right">
+            <li><a href="/" class="{% if page.main_nav == 'home' %} selected {% endif %}">home</a></li>
+            <li><a href="/equipment.html" class="{% if page.main_nav == 'equipment' %} selected {% endif %}">equipment</a></li>
+            <li><a href="/services.html" class="{% if page.main_nav == 'services' %} selected {% endif %}">services</a></li>
+            <li><a href="/portfolio.html" class="{% if page.main_nav == 'portfolio' %} selected {% endif %}">3d portfolio <sup>new</sup></a></li>
+            <li><a href="/contacts.html" class="{% if page.main_nav == 'contacts' %} selected {% endif %}">contacts</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="content">
+        {{ content }}
+      </div>  
+    </div>
+    
+    <div id="footer">
+      <div class="container">
+        <img src="/images/logo.png" alt="Devshard limited">
+      </div>
+    </div>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/app.js"></script>
+  </body>
+</html>
