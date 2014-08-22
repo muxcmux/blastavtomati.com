@@ -11365,6 +11365,71 @@ button:focus {
   margin: 40px 0;
 }
 
+/* line 619, ../sass/_main.scss */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+/* line 623, ../sass/_main.scss */
+.video-container iframe, .video-container object, .video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 632, ../sass/_main.scss */
+table.blast {
+  width: 100%;
+}
+/* line 635, ../sass/_main.scss */
+table.blast tr td {
+  width: 50%;
+  vertical-align: middle;
+  padding: 30px 20px;
+  border-bottom: 1px solid #eee;
+}
+/* line 640, ../sass/_main.scss */
+table.blast tr td p {
+  font-weight: 300;
+  color: #777;
+}
+/* line 644, ../sass/_main.scss */
+table.blast tr td ul {
+  list-style: none;
+  font-family: Nunito;
+  margin: 0 10px 0 10px;
+  padding: 0;
+  font-weight: 300;
+}
+/* line 650, ../sass/_main.scss */
+table.blast tr td ul li {
+  color: #777;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 655, ../sass/_main.scss */
+table.blast tr td ul li span {
+  font-style: italic;
+  display: block;
+  float: right;
+  color: #efc94c;
+  padding-right: 5px;
+}
+/* line 662, ../sass/_main.scss */
+table.blast tr td ul li i {
+  color: #334d5c;
+  display: inline-block;
+  width: 25px;
+  text-align: center;
+}
+
 /* phones */
 @media only screen and (max-width: 767px) {
   /* line 3, ../sass/_responsive.scss */
