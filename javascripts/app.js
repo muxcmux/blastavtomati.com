@@ -67,4 +67,10 @@ $(function() {
   $('div.lightbox a').featherlightGallery({
     openSpeed: 200
   });
+  
+  $('#offcanvas-toggle').click(function(e) {
+    e.preventDefault();
+    $('body').toggleClass('sidebar-toggled');
+    $(this).toggleClass('active');
+  });
 });

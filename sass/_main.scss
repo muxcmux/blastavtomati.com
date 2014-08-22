@@ -12,6 +12,10 @@ body {
   /* The html and body elements cannot have any padding or margin. */
 }
 
+body {
+  position: relative;
+}
+
 /* Wrapper for page content to push down footer */
 #wrap {
   min-height: 100%;
@@ -20,6 +24,88 @@ body {
   margin: 0 auto -120px;
   /* Pad bottom by footer height */
   padding: 0 0 120px;
+  z-index: 1001;
+  background: white;
+}
+
+#wrap, #footer {
+  position: relative;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+body.sidebar-toggled {
+  #wrap, #footer {
+    -webkit-transform: translate3d(-270px, 0, 0);
+    -moz-transform: translate3d(-270px, 0, 0);
+    transform: translate3d(-270px, 0, 0);
+  }
+  #sidebar { -webkit-overflow-scrolling: touch; }
+}
+
+#sidebar {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  z-index: 1000;
+  width: 270px;
+  background: darken($brand-primary, 10%);
+  @include box-shadow(3px 0px 6px rgba(0,0,0,.5) inset);
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      border-top: 1px solid darken($brand-primary, 5%);
+      border-bottom: 1px solid darken($brand-primary, 15%);
+      a {
+        font-weight: 300;
+        font-size: 16px;
+        color: #f2f2f2;
+        padding: 10px 20px;
+        display: block;
+        text-transform: uppercase;
+        i {
+          margin-right: 5px;
+        }
+        &:hover {
+          color: darken(#f2f2f2, 10%);
+          text-decoration: none;
+        }
+        &.selected {
+          background: $brand-success;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+#offcanvas-toggle {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 68px;
+  height: 68px;
+  color: $brand-primary;
+  font-size: 42px;
+  &:active, &:hover, &.active {
+    background: darken($brand-primary, 10%);
+    color: white;
+  }
+  i {
+    display: block;
+    right: -2px;
+    top: 4px;
+    width: 68px;
+    height: 64px;
+    position: absolute;
+    text-align: center;
+  }
 }
 
 .btn:focus { outline: none !important }
@@ -37,6 +123,7 @@ body {
 
 /* Set the fixed height of the footer here */
 #footer {
+  z-index: 1002;
   height: 120px;
   background-color: lighten($brand-primary, 7%);
   .container { position: relative }

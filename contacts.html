@@ -70,6 +70,10 @@ main_nav: contacts
     var office = new google.maps.LatLng(42.147254, 24.738727);
     var center = new google.maps.LatLng(42.147487, 24.732464);
     
+    if (window.innerWidth < 768) {
+      center = office;
+    }
+    
     var mapOptions = {
       center: center,
       zoom: 16,

@@ -18,13 +18,14 @@
             <img src="/images/logo.png" alt="Devshard - precision engineering" />
             Devshard Ltd
           </a>
-          <ul id="main-nav" class="pull-right">
+          <ul id="main-nav" class="pull-right hidden-xs">
             <li><a href="/" class="{% if page.main_nav == 'home' %} selected {% endif %}">home</a></li>
             <li><a href="/equipment.html" class="{% if page.main_nav == 'equipment' %} selected {% endif %}">equipment</a></li>
             <li><a href="/services.html" class="{% if page.main_nav == 'services' %} selected {% endif %}">services</a></li>
             <li><a href="/portfolio.html" class="{% if page.main_nav == 'portfolio' %} selected {% endif %}">3d portfolio <sup>new</sup></a></li>
             <li><a href="/contacts.html" class="{% if page.main_nav == 'contacts' %} selected {% endif %}">contacts</a></li>
           </ul>
+          <a href="#" id="offcanvas-toggle" class="visible-xs"><i class="fa-bars"></i></a>
         </div>
       </div>
 
@@ -37,6 +38,16 @@
       <div class="container">
         <img src="/images/logo.png" alt="Devshard limited">
       </div>
+    </div>
+    
+    <div id="sidebar" role="navigation">
+      <ul>
+        <li><a href="/" class="{% if page.main_nav == 'home' %} selected {% endif %}">home</a></li>
+        <li><a href="/equipment.html" class="{% if page.main_nav == 'equipment' %} selected {% endif %}">equipment</a></li>
+        <li><a href="/services.html" class="{% if page.main_nav == 'services' %} selected {% endif %}">services</a></li>
+        <li><a href="/portfolio.html" class="{% if page.main_nav == 'portfolio' %} selected {% endif %}">3d portfolio <sup>new</sup></a></li>
+        <li><a href="/contacts.html" class="{% if page.main_nav == 'contacts' %} selected {% endif %}">contacts</a></li>
+      </ul>
     </div>
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
