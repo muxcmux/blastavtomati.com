@@ -11383,47 +11383,41 @@ button:focus {
 }
 
 /* line 632, ../sass/_main.scss */
-table.blast {
-  width: 100%;
+.row.blast {
+  border-bottom: 1px solid #eee;
+  padding: 30px 20px;
 }
 /* line 635, ../sass/_main.scss */
-table.blast tr td {
-  width: 50%;
-  vertical-align: middle;
-  padding: 30px 20px;
-  border-bottom: 1px solid #eee;
-}
-/* line 640, ../sass/_main.scss */
-table.blast tr td p {
+.row.blast p {
   font-weight: 300;
   color: #777;
 }
-/* line 644, ../sass/_main.scss */
-table.blast tr td ul {
+/* line 639, ../sass/_main.scss */
+.row.blast ul {
   list-style: none;
   font-family: Nunito;
   margin: 0 10px 0 10px;
   padding: 0;
   font-weight: 300;
 }
-/* line 650, ../sass/_main.scss */
-table.blast tr td ul li {
+/* line 645, ../sass/_main.scss */
+.row.blast ul li {
   color: #777;
   display: block;
   position: relative;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 655, ../sass/_main.scss */
-table.blast tr td ul li span {
+/* line 650, ../sass/_main.scss */
+.row.blast ul li span {
   font-style: italic;
   display: block;
   float: right;
   color: #efc94c;
   padding-right: 5px;
 }
-/* line 662, ../sass/_main.scss */
-table.blast tr td ul li i {
+/* line 657, ../sass/_main.scss */
+.row.blast ul li i {
   color: #334d5c;
   display: inline-block;
   width: 25px;
@@ -11447,5 +11441,15 @@ table.blast tr td ul li i {
     bottom: -70px;
     right: 50%;
     margin-right: -5px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  /* line 19, ../sass/_responsive.scss */
+  .row.blast {
+    padding: 0 15px;
+  }
+  /* line 21, ../sass/_responsive.scss */
+  .row.blast > div {
+    padding: 20px 0;
   }
 }
