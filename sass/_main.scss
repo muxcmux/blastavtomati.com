@@ -24,6 +24,17 @@ body {
 
 .btn:focus { outline: none !important }
 
+.btn-primary {
+  border-radius: 2px;
+  background: lighten($brand-primary, 10%);
+  border: none;
+  border-bottom: 3px solid $brand-primary;
+  &:hover {
+    background: $brand-primary;
+    border-bottom-color: darken($brand-primary, 5%);
+  }
+}
+
 /* Set the fixed height of the footer here */
 #footer {
   height: 120px;
@@ -72,7 +83,7 @@ h1.alt, h2.alt, h3.alt, h4.alt, h5.alt, h6.alt {
   margin: 5px 20px 5px 20px;
   display: block;
   height: 38px;
-  color: #ccc;
+  color: #999;
   font-style: italic;
   line-height: 39px;
   font-weight: 300;
@@ -386,16 +397,6 @@ button {
     position: absolute;
     z-index: 997;
     margin-top: 52px;
-    .btn {
-      border-radius: 2px;
-      background: lighten($brand-primary, 10%);
-      border: none;
-      border-bottom: 3px solid $brand-primary;
-      &:hover {
-        background: $brand-primary;
-        border-bottom-color: darken($brand-primary, 5%);
-      }
-    }
     ul {
       list-style: none;
       margin-bottom: 15px;
@@ -475,3 +476,142 @@ button {
 }
 
 #message { margin-top: 10px; }
+
+.products-gallery {
+  h3 { padding: 0; margin: 40px 0 10px 0; text-align: center; }
+  p.lead { margin-bottom: 30px }
+  padding-bottom: 40px;
+}
+
+.lightbox {
+  @include clearfix;
+  a.thumbnail {
+    display: block;
+    float: left;
+    margin: 0 10px 10px 0;
+    width: 120px;
+    img { width: 100% }
+    border-radius: 2px;
+    @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.15));
+  }
+}
+
+.featherlight-image {
+  max-width: 760px;
+}
+
+.services {
+  h2 {
+    margin-bottom: 20px;
+    text-align: center
+  }
+  .lead {
+    font-size: 18px;
+  }
+  p.center {
+    text-align: center;
+  }
+  .cad {
+    padding: 20px 0;
+    background: $brand-success;
+    h2 { color: white }
+    color: lighten($brand-success, 40%);
+    .center {
+      margin-top: 30px;
+      .btn {
+        border-color: white;
+        color: white;
+        &:hover {
+          background: white;
+          color: $brand-success;
+        }
+      }
+    }
+  }
+  .consulting {
+    padding: 20px 0;
+    h2 { color: $brand-primary }
+    color: #666;
+    ul {
+      font-size: 18px;
+      margin: 0 0 40px 0;
+      padding: 0;
+      list-style: none;
+      font-family: Nunito;
+      font-weight: 300;
+      li {
+        padding: 5px 0 5px 25px;
+        position: relative;
+        &:before {
+          color: $brand-primary;
+          position: absolute;
+          display: block;
+          content: "\f046";
+          font-family: FontAwesome;
+          font-size: 20px;
+          top: 4px;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+.portfolio {
+  background: $brand-danger;
+  color: lighten($brand-danger, 26%);
+  h1 { color: white; }
+  position: relative;
+  border-bottom: 2px solid darken($brand-danger, 10%);
+}
+
+.portfolio-nav {
+  margin: 40px 0;
+  list-style: none;
+  padding: 0;
+  li {
+    a {
+      @include box-sizing(border-box);
+      display: block;
+      padding: 5px 5px 5px 15px;
+      color: #999;
+      &:hover {
+        color: $brand-primary;
+        border-left: 1px solid $brand-primary;
+        padding-left: 14px;
+      }
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        a {
+          font-size: 12px;
+          padding: 3px 5px 3px 30px;
+          &:hover {
+            padding-left: 29px;
+          }
+        }
+      }
+    }
+  }
+  > li.active {
+    > a {
+      color: $brand-primary;
+      border-left: 2px solid $brand-primary;
+      padding-left: 13px;
+      &:hover { padding-left: 13px }
+    }
+    > ul > li.active > a {
+      color: $brand-primary;
+      border-left: 2px solid $brand-primary;
+      padding-left: 28px;
+      &:hover { padding-left: 28px }
+    }
+  }
+}
+
+.renderer {
+  margin: 40px 0;
+}

@@ -63,4 +63,8 @@ $(function() {
      show_sent();
    });
   }
+  
+  $('div.lightbox a').featherlightGallery({
+    openSpeed: 200
+  });
 });

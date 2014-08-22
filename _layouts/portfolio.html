@@ -1,0 +1,53 @@
+---
+layout: default
+title: 3D Portfolio
+main_nav: portfolio
+---
+<div class="portfolio">
+  <div class="container">
+    <div class="jumbotron no-bg">
+      <h1 class="alt">3D Portfolio</h1>
+      <p>
+        Check out some examples of the work we have done for clients around the world.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="col-sm-9">
+    <div class="renderer">
+      <script src="https://embed.github.com/view/3d/muxcmux/devshard.com/gh-pages/3d/{{ content }}?width=675&height=400"></script>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <ul class="portfolio-nav">
+      <li class="{% if page.main_item == 'router' %} active {% endif %}">
+        <a href="/portfolio.html">Router</a>
+        <ul>
+          <li class="{% if page.item == 'router-base' %} active {% endif %}"><a href="/portfolio.html">Base</a></li>
+          <li class="{% if page.item == 'router-cover' %} active {% endif %}"><a href="/portfolio/router/cover.html">Cover</a></li>
+          <li class="{% if page.item == 'router-front' %} active {% endif %}"><a href="/portfolio/router/front.html">Front cover</a></li>
+          <li class="{% if page.item == 'router-box' %} active {% endif %}"><a href="/portfolio/router/box.html">PCB Box</a></li>
+          <li class="{% if page.item == 'router-grid' %} active {% endif %}"><a href="/portfolio/router/grid.html">Router Grid</a></li>
+        </ul>
+      </li>
+      <li class="{% if page.main_item == 'ad' %} active {% endif %}">
+        <a href="/portfolio/ad/base.html">Arista display</a>
+        <ul>
+          <li class="{% if page.item == 'ad-base' %} active {% endif %}"><a href="/portfolio/ad/base.html">Base</a></li>
+          <li class="{% if page.item == 'ad-bcover' %} active {% endif %}"><a href="/portfolio/ad/bcover.html">Battery cover</a></li>
+          <li class="{% if page.item == 'ad-cover' %} active {% endif %}"><a href="/portfolio/ad/cover.html">Cover</a></li>
+          <li class="{% if page.item == 'ad-stand' %} active {% endif %}"><a href="/portfolio/ad/stand.html">Stand</a></li>
+        </ul>
+      </li>
+      <li class="{% if page.main_item == 'aa' %} active {% endif %}">
+        <a href="/portfolio/aa/base.html">Arista AMU</a>
+        <ul>
+          <li class="{% if page.item == 'aa-base' %} active {% endif %}"><a href="/portfolio/aa/base.html">Base</a></li>
+          <li class="{% if page.item == 'aa-bcover' %} active {% endif %}"><a href="/portfolio/aa/bcover.html">Battery cover</a></li>
+          <li class="{% if page.item == 'aa-cover' %} active {% endif %}"><a href="/portfolio/aa/cover.html">Cover</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
